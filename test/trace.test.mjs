@@ -18,7 +18,7 @@ import {
   describeArgv, envSummary, psModulePathShape, spawnShape, traceEnabled, traceEvent, traceFile, traceHandoff,
 } from '../lib/trace.js'
 import { probeBinary } from '../lib/binary.js'
-import { runPreparation } from '../lib/workspace-preparation.js'
+import { runPreparation, watchGate } from '../lib/workspace-preparation.js'
 import { TEST_HOME, assert, scenarioDir, test, report } from './lib/harness.mjs'
 
 const previousFlag = process.env[TRACE_ENV]
@@ -242,6 +242,20 @@ await test('an executable probe is recorded with the environment it was handed',
   // A candidate is never handed the host environment: this is the whole reason
   // `lib/env.js` exists, and the record shows it.
   assert.equal(probe.env.psModulePath.present, false)
+})
+
+await test('the preparation gate names its own reason', async () => {
+  // "The hook never ran" and "the hook ran and skipped" look identical from
+  // outside, and the difference decides whether a shell failure is a preparation
+  // bug at all. The reason is therefore a value, not a nested condition.
+  for (const tool of ['pwsh', 'bash', 'run_code', 'pwsh_persistent', 'bash_persistent']) {
+    assert.equal(watchGate({ name: tool }, { id: 's' }), 'watched', tool)
+  }
+  for (const tool of ['read', 'ops_glob', 'ops_replace', 'write']) {
+    assert.equal(watchGate({ name: tool }, { id: 's' }), 'not-watched', tool)
+  }
+  assert.equal(watchGate({ name: 'pwsh' }, undefined), 'no-session')
+  assert.equal(watchGate(undefined, { id: 's' }), 'not-watched')
 })
 
 report('trace')
