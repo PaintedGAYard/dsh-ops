@@ -14,9 +14,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import {
-  TRACE_ENV, TRACE_MAX_BYTES, TRACE_VERSION,
-  envSummary, psModulePathShape, spawnShape, traceEnabled, traceEvent, traceFile, traceHandoff,
+  TRACE_ENV, TRACE_FILE_ENV, TRACE_MAX_BYTES, TRACE_VERSION,
+  describeArgv, envSummary, psModulePathShape, spawnShape, traceEnabled, traceEvent, traceFile, traceHandoff,
 } from '../lib/trace.js'
+import { probeBinary } from '../lib/binary.js'
 import { runPreparation } from '../lib/workspace-preparation.js'
 import { TEST_HOME, assert, scenarioDir, test, report } from './lib/harness.mjs'
 
@@ -196,6 +197,51 @@ await test('the preparation handoff is recorded with both halves, and still reje
     assert.equal(preparation.env.psModulePath.present, false, 'the recorded environment must be the scrubbed one')
   }
   assert.equal(typeof preparation.env.count, 'number')
+})
+
+await test('a log can be redirected per experiment, so a sweep cannot mix evidence', async () => {
+  const file = path.join(scenarioDir('trace-redirect'), 'probe-a.jsonl')
+  const saved = process.env[TRACE_FILE_ENV]
+  process.env[TRACE_FILE_ENV] = file
+  try {
+    assert.equal(traceFile(), file)
+    assert.equal(path.isAbsolute(traceFile()), true)
+  } finally {
+    if (saved === undefined) delete process.env[TRACE_FILE_ENV]
+    else process.env[TRACE_FILE_ENV] = saved
+  }
+  assert.equal(traceFile(), path.join(TEST_HOME, 'dsh-ops', 'trace', 'handoff.jsonl'))
+})
+
+await test('an argv is classified by whether the host runner wraps it', async () => {
+  const direct = describeArgv(['C:\\w\\dsh-ops-worker.exe'])
+  assert.equal(direct.runnerWrapped, false)
+  assert.equal(direct.head, 'C:\\w\\dsh-ops-worker.exe')
+
+  // The ACL backend's contract: [node, runner.js, '--workspace', …, '--', argv].
+  // Seeing the wrapper is the only way to tell "the child never started" from
+  // "the child crashed" — both are just a non-zero exit code.
+  const wrapped = describeArgv(['C:\\node.exe', 'C:\\pkg\\acl\\lib\\runner.js', '--workspace', 'E:\\ws', '--', 'C:\\w\\worker.exe'])
+  assert.equal(wrapped.runnerWrapped, true)
+  assert.match(wrapped.wrapper, /runner\.js$/)
+
+  assert.equal(describeArgv(undefined).head, null)
+  assert.equal(describeArgv([]).runnerWrapped, false)
+})
+
+await test('an executable probe is recorded with the environment it was handed', async () => {
+  const root = scenarioDir('trace-probe')
+  await withFlag('1', () => {
+    const result = probeBinary(path.join(root, 'no-such-binary'))
+    assert.equal(result.ok, false)
+  })
+  const probe = records(traceFile()).find(record => record.kind === 'probe')
+  assert.ok(probe, 'the probe hop must have been recorded')
+  assert.equal(probe.outcome, 'failed')
+  assert.match(probe.file, /no-such-binary/)
+  // A candidate is never handed the host environment: this is the whole reason
+  // `lib/env.js` exists, and the record shows it.
+  assert.equal(probe.env.psModulePath.present, false)
 })
 
 report('trace')
