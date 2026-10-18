@@ -1,0 +1,104 @@
+{
+  "generatedAt": "2026-10-18T09:37:28.322Z",
+  "host": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "powershell51": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "hostPsModulePath": "E:\\Users\\David\\Documents\\PowerShell\\Modules;C:\\Program Files\\PowerShell\\Modules;c:\\program files\\powershell\\7\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules"
+  },
+  "matrix": [
+    {
+      "tag": "A-030-inherited-hide",
+      "hide": true,
+      "stdio": "ignore",
+      "exitCode": 0,
+      "outFileRaw": "﻿{\"tag\":\"A-030-inherited-hide\",\"pid\":18732,\"hostName\":\"ConsoleHost\",\"version\":\"5.1.26100.9444\",\"psModulePathPresent\":true,\"psModulePath\":\"E:\\\\Users\\\\David\\\\Documents\\\\PowerShell\\\\Modules;C:\\\\Program Files\\\\PowerShell\\\\Modules;c:\\\\program files\\\\powershell\\\\7\\\\Modules;C:\\\\Program Files\\\\WindowsPowerShell\\\\Modules;C:\\\\WINDOWS\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\Modules\",\"candidateBases\":[\"C:\\\\program files\\\\powershell\\\\7\\\\Modules\\\\Microsoft.PowerShell.Security\",\"C:\\\\WINDOWS\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\Modules\\\\Microsoft.PowerShell.Security\"],\"importError\":\"IMPORT: RuntimeException: The f",
+      "result": {
+        "tag": "A-030-inherited-hide",
+        "pid": 18732,
+        "hostName": "ConsoleHost",
+        "version": "5.1.26100.9444",
+        "psModulePathPresent": true,
+        "psModulePath": "E:\\Users\\David\\Documents\\PowerShell\\Modules;C:\\Program Files\\PowerShell\\Modules;c:\\program files\\powershell\\7\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+        "candidateBases": [
+          "C:\\program files\\powershell\\7\\Modules\\Microsoft.PowerShell.Security",
+          "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Security"
+        ],
+        "importError": "IMPORT: RuntimeException: The following error occurred while loading the extended type data file: Error in TypeData \"System.Security.AccessControl.ObjectSecurity\": The member AuditToString is already present.\nError in TypeData \"System.Security.AccessControl.ObjectSecurity\": The member AccessToString is already present.\nError in TypeData \"System.Security.AccessControl.ObjectSecurity\": The member Sddl is already present.\nError in TypeData \"System.Security.AccessControl.ObjectSecurity\": The member Access is already present.\nError in TypeData \"System.Security.AccessControl.ObjectSecurity\": The member Group is already present.\nError in TypeData \"System.Security.AccessControl.ObjectSecurity\": The member Owner is already present.\nError in TypeData \"System.Security.AccessControl.ObjectSecurity\": The member Path is already present.\n",
+        "getAclError": "CommandNotFoundException: The term 'Get-Acl' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.",
+        "getAclResolved": false
+      }
+    },
+    {
+      "tag": "B-031-scrubbed-hide",
+      "hide": true,
+      "stdio": "ignore",
+      "exitCode": 0,
+      "outFileRaw": "﻿{\"tag\":\"B-031-scrubbed-hide\",\"pid\":5480,\"hostName\":\"ConsoleHost\",\"version\":\"5.1.26100.9444\",\"psModulePathPresent\":true,\"psModulePath\":\"E:\\\\Users\\\\David\\\\Documents\\\\WindowsPowerShell\\\\Modules;C:\\\\Program Files\\\\WindowsPowerShell\\\\Modules;C:\\\\WINDOWS\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\Modules\",\"candidateBases\":[\"C:\\\\WINDOWS\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\Modules\\\\Microsoft.PowerShell.Security\",\"GetAclSource=Microsoft.PowerShell.Security\"],\"importError\":null,\"getAclError\":null,\"getAclResolved\":true}\r\n",
+      "result": {
+        "tag": "B-031-scrubbed-hide",
+        "pid": 5480,
+        "hostName": "ConsoleHost",
+        "version": "5.1.26100.9444",
+        "psModulePathPresent": true,
+        "psModulePath": "E:\\Users\\David\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+        "candidateBases": [
+          "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Security",
+          "GetAclSource=Microsoft.PowerShell.Security"
+        ],
+        "importError": null,
+        "getAclError": null,
+        "getAclResolved": true
+      }
+    },
+    {
+      "tag": "C-031-scrubbed+registry-hide",
+      "hide": true,
+      "stdio": "ignore",
+      "exitCode": 0,
+      "outFileRaw": "﻿{\"tag\":\"C-031-scrubbed+registry-hide\",\"pid\":34712,\"hostName\":\"ConsoleHost\",\"version\":\"5.1.26100.9444\",\"psModulePathPresent\":true,\"psModulePath\":\"E:\\\\Users\\\\David\\\\Documents\\\\WindowsPowerShell\\\\Modules;C:\\\\Program Files\\\\WindowsPowerShell\\\\Modules;C:\\\\WINDOWS\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\Modules\",\"candidateBases\":[\"C:\\\\WINDOWS\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\Modules\\\\Microsoft.PowerShell.Security\",\"GetAclSource=Microsoft.PowerShell.Security\"],\"importError\":null,\"getAclError\":null,\"getAclResolved\":true}\r\n",
+      "result": {
+        "tag": "C-031-scrubbed+registry-hide",
+        "pid": 34712,
+        "hostName": "ConsoleHost",
+        "version": "5.1.26100.9444",
+        "psModulePathPresent": true,
+        "psModulePath": "E:\\Users\\David\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+        "candidateBases": [
+          "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Security",
+          "GetAclSource=Microsoft.PowerShell.Security"
+        ],
+        "importError": null,
+        "getAclError": null,
+        "getAclResolved": true
+      }
+    },
+    {
+      "tag": "E-030-inherited-visible",
+      "hide": false,
+      "stdio": "ignore",
+      "exitCode": 0,
+      "outFileRaw": "﻿{\"tag\":\"E-030-inherited-visible\",\"pid\":28620,\"hostName\":\"ConsoleHost\",\"version\":\"5.1.26100.9444\",\"psModulePathPresent\":true,\"psModulePath\":\"E:\\\\Users\\\\David\\\\Documents\\\\PowerShell\\\\Modules;C:\\\\Program Files\\\\PowerShell\\\\Modules;c:\\\\program files\\\\powershell\\\\7\\\\Modules;C:\\\\Program Files\\\\WindowsPowerShell\\\\Modules;C:\\\\WINDOWS\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\Modules\",\"candidateBases\":[\"C:\\\\program files\\\\powershell\\\\7\\\\Modules\\\\Microsoft.PowerShell.Security\",\"C:\\\\WINDOWS\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\Modules\\\\Microsoft.PowerShell.Security\"],\"importError\":\"IMPORT: RuntimeException: Th",
+      "result": {
+        "tag": "E-030-inherited-visible",
+        "pid": 28620,
+        "hostName": "ConsoleHost",
+        "version": "5.1.26100.9444",
+        "psModulePathPresent": true,
+        "psModulePath": "E:\\Users\\David\\Documents\\PowerShell\\Modules;C:\\Program Files\\PowerShell\\Modules;c:\\program files\\powershell\\7\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+        "candidateBases": [
+          "C:\\program files\\powershell\\7\\Modules\\Microsoft.PowerShell.Security",
+          "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Security"
+        ],
+        "importError": "IMPORT: RuntimeException: The following error occurred while loading the extended type data file: Error in TypeData \"System.Security.AccessControl.ObjectSecurity\": The member AuditToString is already present.\nError in TypeData \"System.Security.AccessControl.ObjectSecurity\": The member AccessToString is already present.\nError in TypeData \"System.Security.AccessControl.ObjectSecurity\": The member Sddl is already present.\nError in TypeData \"System.Security.AccessControl.ObjectSecurity\": The member Access is already present.\nError in TypeData \"System.Security.AccessControl.ObjectSecurity\": The member Group is already present.\nError in TypeData \"System.Security.AccessControl.ObjectSecurity\": The member Owner is already present.\nError in TypeData \"System.Security.AccessControl.ObjectSecurity\": The member Path is already present.\n",
+        "getAclError": "CommandNotFoundException: The term 'Get-Acl' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.",
+        "getAclResolved": false
+      }
+    }
+  ],
+  "realRunPreparation": {
+    "tag": "D-real-runPreparation",
+    "settled": "rejected",
+    "message": "spawn EPERM"
+  }
+}

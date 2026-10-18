@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-10-18T10:00:54.056Z",
+  "settled": {
+    "settled": "rejected",
+    "durationMs": 249,
+    "message": "DSH workspace preparation failed: exited with code 1 after 248 ms preparing E:\\Users\\David\\Source\\Playgrounds\\etc: E:\\Users\\David\\Source\\Playgrounds\\etc\\dsh-ops-audit\\bin\\prepare-workspace.ps1 : The 'Get-Acl' command was found in the \r\nmodule 'Microsoft.PowerShell.Security', but the module could not be loaded. For more information, run 'Import-Module \r\nMicrosoft.PowerShell.Security'.\r\n    + CategoryInfo          : ObjectNotFound: (Get-Acl:String) [prepare-workspace.ps1], CommandNotFoundException\r\n    + FullyQualifiedErrorId : CouldNotAutoloadMatchingModule,prepare-workspace.ps1"
+  },
+  "outcome": "rejected",
+  "classification": "module-autoload",
+  "shape": {
+    "present": true,
+    "coreRootIndex": 2,
+    "inboxRootIndex": 4,
+    "roots": [
+      "E:\\Users\\David\\Documents\\PowerShell\\Modules",
+      "C:\\Program Files\\PowerShell\\Modules",
+      "c:\\program files\\powershell\\7\\Modules",
+      "C:\\Program Files\\WindowsPowerShell\\Modules",
+      "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules"
+    ],
+    "poisonAheadOfInbox": true
+  },
+  "failureHead": "Error: DSH workspace preparation failed: exited with code 1 after 248 ms preparing E:\\Users\\David\\Source\\Playgrounds\\etc: E:\\Users\\David\\Source\\Playgrounds\\etc\\dsh-ops-audit\\bin\\prepare-workspace.ps1 : The 'Get-Acl' command was found in the \r | module 'Microsoft.PowerShell.Security', but the module could not be loaded. For more information, run 'Import-Module \r | Microsoft.PowerShell.Security'.\r |     + CategoryInfo          : ObjectNotFound: (Get-Acl:String) [prepare-workspace.ps1], CommandNotFoundException\r"
+}

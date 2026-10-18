@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-10-18T10:00:33.331Z",
+  "host": {
+    "node": "v24.19.0",
+    "psModulePathInThisProcess": "E:\\Users\\David\\Documents\\PowerShell\\Modules;C:\\Program Files\\PowerShell\\Modules;c:\\program files\\powershell\\7\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules"
+  },
+  "results": {
+    "preparation": {
+      "settled": "resolved",
+      "durationMs": 264
+    },
+    "workerExists": true,
+    "probe": {
+      "ok": true,
+      "version": "dsh-ops-worker 0.3.1"
+    }
+  },
+  "recordKinds": [
+    "preparation",
+    "probe"
+  ],
+  "checks": [
+    {
+      "name": "I2a preparation records the spawn shape",
+      "ok": true,
+      "detail": {
+        "windowsHide": true,
+        "detached": false,
+        "stdio": [
+          "ignore",
+          "pipe",
+          "pipe"
+        ],
+        "inheritsConsole": false
+      }
+    },
+    {
+      "name": "I2b the interpreter gets no inherited PSModulePath",
+      "ok": true,
+      "detail": false
+    },
+    {
+      "name": "I1 the probe hands over no credential-shaped value",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "records carry the writing process pid and a version",
+      "ok": true,
+      "detail": [
+        "preparation@21172",
+        "probe@21172"
+      ]
+    }
+  ]
+}

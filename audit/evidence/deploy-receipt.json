@@ -1,0 +1,16 @@
+{
+  "capturedAt": "2026-10-18T20:07:32.4998539+08:00",
+  "profile": "web",
+  "declaredSpec": "file:C:/Users/david/AppData/Local/dsh-ops-src/0.3.1",
+  "installedVersion": "0.3.1",
+  "installedWorkerSha256": "89B8E1E9856E9FF6755C70EE6143EFFF65DC84A354A7E0D22A1D24AAC87C8225",
+  "stagedFrom": "C:\\Users\\david\\AppData\\Local\\dsh-ops-src\\0.3.1",
+  "tagArchiveSha256": "40E4AC3630A97D5A2A69B89BB9A832D41ED79C984EB63352905746B81FC28132",
+  "tagArchiveUrl": "https://codeload.github.com/T-Auto/dsh-ops/tar.gz/refs/tags/v0.3.1",
+  "runtimeAssetUrl": "https://github.com/T-Auto/dsh-ops/releases/download/v0.3.1/native-win32-x64-runtime-v0.3.1.zip",
+  "runtimeAssetSha256": "89B8E1E9856E9FF6755C70EE6143EFFF65DC84A354A7E0D22A1D24AAC87C8225",
+  "libFilesCompared": 50,
+  "libFilesDrifted": 0,
+  "auditBuildDeployed": false,
+  "auditBranchHead": "ac0797c trace: record the worker handoff when it settles as a failure"
+}

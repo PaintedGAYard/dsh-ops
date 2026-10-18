@@ -1,0 +1,57 @@
+=== bash-ipc.test.mjs
+--- bash-ipc.test.mjs exited 1
+=== bin.test.mjs
+--- bin.test.mjs exited 1
+=== binary.test.mjs
+--- binary.test.mjs exited 1
+=== config-updates.test.mjs
+--- config-updates.test.mjs exited 1
+=== config.test.mjs
+=== credential-fence.test.mjs
+--- credential-fence.test.mjs skipped
+=== file-args.test.mjs
+=== file-contract.test.mjs
+=== file-metadata.test.mjs
+--- file-metadata.test.mjs skipped
+=== grep-multiline.test.mjs
+--- grep-multiline.test.mjs skipped
+=== hardening.test.mjs
+--- hardening.test.mjs exited 1
+=== inspect-hex.test.mjs
+--- inspect-hex.test.mjs skipped
+=== jobs-args.test.mjs
+=== lifecycle.test.mjs
+--- lifecycle.test.mjs exited 1
+=== linux-args.test.mjs
+--- linux-args.test.mjs skipped
+=== linux-attributes.test.mjs
+--- linux-attributes.test.mjs skipped
+=== linux-paths.test.mjs
+--- linux-paths.test.mjs skipped
+=== linux-protocol.test.mjs
+--- linux-protocol.test.mjs skipped
+=== linux-sandbox.test.mjs
+--- linux-sandbox.test.mjs skipped
+=== linux-scope.test.mjs
+--- linux-scope.test.mjs skipped
+=== linux-shell.test.mjs
+--- linux-shell.test.mjs exited 1
+=== manifest.test.mjs
+--- manifest.test.mjs exited 1
+=== mount.test.mjs
+--- mount.test.mjs exited 1
+=== output-budget.test.mjs
+--- output-budget.test.mjs skipped
+=== permissions.test.mjs
+--- permissions.test.mjs exited 1
+=== policy.test.mjs
+=== ptc.test.mjs
+--- ptc.test.mjs exited 1
+=== release-scope.test.mjs
+--- release-scope.test.mjs exited 1
+=== replace-concurrency.test.mjs
+--- replace-concurrency.test.mjs skipped
+=== shells.test.mjs
+--- shells.test.mjs exited 1
+=== trace.test.mjs
+dsh-ops test: 13 of 31 suite(s) failed, 12 skipped in 2s

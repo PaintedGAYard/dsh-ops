@@ -1,0 +1,71 @@
+trace      : C:\Users\david\.dsh\dsh-ops\trace\handoff.jsonl
+marker     : off (no trace.on)
+records    : 240 shown / 240 total
+window     : 2026-10-18T10:02:20.528Z .. 2026-10-18T11:53:41.414Z
+pids       : 34492, 17752, 28144, 26376, 9972, 4204
+
+--- by kind / outcome ---------------------------------------
+  dispatch/hook-mounted              5
+  dispatch/prepared                  95
+  dispatch/skipped                   124
+  preparation/resolved               5
+  worker/-                           10
+  worker/settle-failed               1
+
+--- preparation ---------------------------------------------
+  2026-10-18T10:05:55.673Z pid=17752 resolved 277ms
+    root=E:\Users\David\Source\Playgrounds\etc
+    executable=C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+    spawn={"windowsHide":true,"detached":false,"stdio":["ignore","pipe","pipe"],"inheritsConsole":false}
+    psModulePath.present=false env.count=91 withheld=[]
+  2026-10-18T10:11:10.643Z pid=28144 resolved 275ms
+    root=E:\Users\David\Source\Playgrounds\etc
+    executable=C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+    spawn={"windowsHide":true,"detached":false,"stdio":["ignore","pipe","pipe"],"inheritsConsole":false}
+    psModulePath.present=false env.count=91 withheld=[]
+  2026-10-18T10:18:17.411Z pid=26376 resolved 252ms
+    root=E:\Users\David\Source\Playgrounds\etc
+    executable=C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+    spawn={"windowsHide":true,"detached":false,"stdio":["ignore","pipe","pipe"],"inheritsConsole":false}
+    psModulePath.present=false env.count=91 withheld=[]
+  2026-10-18T11:12:17.749Z pid=9972 resolved 257ms
+    root=E:\Users\David\Source\Playgrounds\etc
+    executable=C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+    spawn={"windowsHide":true,"detached":false,"stdio":["ignore","pipe","pipe"],"inheritsConsole":false}
+    psModulePath.present=false env.count=91 withheld=[]
+  2026-10-18T11:52:50.597Z pid=4204 resolved 267ms
+    root=E:\Users\David\Source\Playgrounds\etc
+    executable=C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+    spawn={"windowsHide":true,"detached":false,"stdio":["ignore","pipe","pipe"],"inheritsConsole":false}
+    psModulePath.present=false env.count=91 withheld=[]
+
+--- workers -------------------------------------------------
+  2026-10-18T10:02:20.528Z file  glob     exit=0    dur=-     wrap=false enf=policy   outcome=settled
+  2026-10-18T10:18:40.589Z file  glob     exit=-    dur=71    wrap=false enf=policy   outcome=settle-failed
+    failure=Error: spawn C:\Users\david\.dsh\profiles\web\node_modules\dsh-ops\runtime\win32-x64\dsh-ops-worker.exe ENOENT
+  2026-10-18T10:18:53.336Z file  glob     exit=2    dur=107   wrap=false enf=policy   outcome=settled
+  2026-10-18T10:19:06.140Z file  glob     exit=0    dur=189   wrap=false enf=policy   outcome=settled
+  2026-10-18T10:19:10.605Z file  glob     exit=0    dur=160   wrap=false enf=policy   outcome=settled
+  2026-10-18T10:19:10.606Z file  glob     exit=0    dur=184   wrap=false enf=policy   outcome=settled
+  2026-10-18T10:19:10.620Z file  glob     exit=0    dur=155   wrap=false enf=policy   outcome=settled
+  2026-10-18T10:19:10.652Z file  glob     exit=0    dur=162   wrap=false enf=policy   outcome=settled
+  2026-10-18T10:32:17.180Z ptc   batch    exit=0    dur=249   wrap=true enf=partial  outcome=settled
+  2026-10-18T10:32:18.780Z ptc   batch    exit=0    dur=248   wrap=true enf=partial  outcome=settled
+  2026-10-18T10:32:20.779Z ptc   result   exit=0    dur=243   wrap=true enf=partial  outcome=settled
+
+--- mcp -----------------------------------------------------
+  (none — this composition does not use FastCtx)
+
+--- invariants ----------------------------------------------
+  SKIP  I1  probe hands over no credential-shaped value
+        no probe records
+  ok    I2  preparation spawn is never console-attached and never inherits PSModulePath
+        5 preparation record(s)
+  SKIP  I3  every MCP spawn carries the forced FASTCTX_NO_PARENT_WATCH name
+        no mcp spawn records
+  ok    I4  confined PTC workers are runner-wrapped, file workers are not
+        3 confined ptc / 8 file worker record(s)
+  SKIP  I5  one host process in the window (advisory unless --since)
+        6 pid(s): 34492, 17752, 28144, 26376, 9972, 4204
+
+no invariant violations

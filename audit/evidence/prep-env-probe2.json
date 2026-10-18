@@ -1,0 +1,105 @@
+{
+  "generatedAt": "2026-10-18T09:37:47.366Z",
+  "hostPsModulePath": "E:\\Users\\David\\Documents\\PowerShell\\Modules;C:\\Program Files\\PowerShell\\Modules;c:\\program files\\powershell\\7\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+  "rows": [
+    {
+      "tag": "absent",
+      "passedIn": "(deleted)",
+      "exitCode": 0,
+      "reported": "E:\\Users\\David\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+      "candidates": [
+        "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Security",
+        "GetAclSource=Microsoft.PowerShell.Security"
+      ],
+      "importFailed": false,
+      "importErrorHead": null,
+      "getAclResolved": true,
+      "getAclError": null
+    },
+    {
+      "tag": "inbox-only-pshome",
+      "passedIn": "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+      "exitCode": 0,
+      "reported": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+      "candidates": [
+        "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Security",
+        "GetAclSource=Microsoft.PowerShell.Security"
+      ],
+      "importFailed": false,
+      "importErrorHead": null,
+      "getAclResolved": true,
+      "getAclError": null
+    },
+    {
+      "tag": "inbox-first-then-ps7",
+      "passedIn": "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;c:\\program files\\powershell\\7\\Modules",
+      "exitCode": 0,
+      "reported": "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;c:\\program files\\powershell\\7\\Modules",
+      "candidates": [
+        "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Security",
+        "C:\\program files\\powershell\\7\\Modules\\Microsoft.PowerShell.Security",
+        "GetAclSource=Microsoft.PowerShell.Security"
+      ],
+      "importFailed": false,
+      "importErrorHead": null,
+      "getAclResolved": true,
+      "getAclError": null
+    },
+    {
+      "tag": "ps7-first-then-inbox",
+      "passedIn": "c:\\program files\\powershell\\7\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+      "exitCode": 0,
+      "reported": "c:\\program files\\powershell\\7\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+      "candidates": [
+        "C:\\program files\\powershell\\7\\Modules\\Microsoft.PowerShell.Security",
+        "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Security"
+      ],
+      "importFailed": true,
+      "importErrorHead": "IMPORT: RuntimeException: The following error occurred while loading the extended type data file: Error in TypeData \"System.Security.AccessControl.ObjectSecurit",
+      "getAclResolved": false,
+      "getAclError": "CommandNotFoundException: The term 'Get-Acl' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again."
+    },
+    {
+      "tag": "ps7-user-only-ahead",
+      "passedIn": "E:\\Users\\David\\Documents\\PowerShell\\Modules;E:\\Users\\David\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+      "exitCode": 0,
+      "reported": "E:\\Users\\David\\Documents\\PowerShell\\Modules;E:\\Users\\David\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+      "candidates": [
+        "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Security",
+        "GetAclSource=Microsoft.PowerShell.Security"
+      ],
+      "importFailed": false,
+      "importErrorHead": null,
+      "getAclResolved": true,
+      "getAclError": null
+    },
+    {
+      "tag": "empty-string",
+      "passedIn": "",
+      "exitCode": 0,
+      "reported": null,
+      "candidates": [
+        "GetAclSource=Microsoft.PowerShell.Security"
+      ],
+      "importFailed": true,
+      "importErrorHead": "IMPORT: FileNotFoundException: The specified module 'Microsoft.PowerShell.Security' was not loaded because no valid module file was found in any module director",
+      "getAclResolved": true,
+      "getAclError": null
+    },
+    {
+      "tag": "trailing-semicolon-ps7",
+      "passedIn": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules;c:\\program files\\powershell\\7\\Modules;",
+      "exitCode": 0,
+      "reported": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules;c:\\program files\\powershell\\7\\Modules;",
+      "candidates": [
+        "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Security",
+        "C:\\program files\\powershell\\7\\Modules\\Microsoft.PowerShell.Security",
+        "GetAclSource=Microsoft.PowerShell.Security"
+      ],
+      "importFailed": false,
+      "importErrorHead": null,
+      "getAclResolved": true,
+      "getAclError": null
+    }
+  ]
+}

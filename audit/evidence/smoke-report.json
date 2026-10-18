@@ -1,0 +1,80 @@
+{
+  "deployed": "C:\\Users\\david\\.dsh\\profiles\\web\\node_modules\\dsh-ops",
+  "allLoaded": true,
+  "results": [
+    {
+      "entry": "lib/trace.js",
+      "ok": true,
+      "exports": 13,
+      "ms": 3
+    },
+    {
+      "entry": "lib/workspace-preparation.js",
+      "ok": true,
+      "exports": 7,
+      "ms": 2
+    },
+    {
+      "entry": "lib/binary.js",
+      "ok": true,
+      "exports": 16,
+      "ms": 1
+    },
+    {
+      "entry": "lib/handshake.js",
+      "ok": true,
+      "exports": 4,
+      "ms": 1
+    },
+    {
+      "entry": "lib/shells.js",
+      "ok": true,
+      "exports": 29,
+      "ms": 2
+    },
+    {
+      "entry": "lib/tools.js",
+      "ok": true,
+      "exports": 7,
+      "ms": 2
+    },
+    {
+      "entry": "lib/profile-install.js",
+      "ok": true,
+      "exports": 1,
+      "ms": 4
+    },
+    {
+      "entry": "lib/ptc/worker.js",
+      "ok": true,
+      "exports": 3,
+      "ms": 2
+    },
+    {
+      "entry": "lib/file/worker.js",
+      "ok": true,
+      "exports": 3,
+      "ms": 2
+    },
+    {
+      "entry": "lib/ptc/index.js",
+      "ok": true,
+      "exports": 3,
+      "ms": 1
+    },
+    {
+      "entry": "lib/components/ptc/index.js",
+      "ok": true,
+      "exports": 2,
+      "ms": 0
+    },
+    {
+      "entry": "lib/components/file/index.js",
+      "ok": true,
+      "exports": 2,
+      "ms": 5
+    }
+  ],
+  "sink": "C:\\Users\\david\\.dsh\\dsh-ops\\trace\\handoff.jsonl",
+  "markerEnabledWithoutMarker": false
+}
